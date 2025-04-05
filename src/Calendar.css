@@ -1,0 +1,179 @@
+/* Calendar Container */
+/* .calendar-container {
+  width: 320px;
+  margin: 20px auto;
+  background: linear-gradient(to bottom, #ffffff, #f0f4f7);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+  background: url('./Calendar.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+} */
+.calendar-container {
+  background: url('C:\Users\DHARSHINI\Desktop\mernreact\my-app\src\Calendar.jpg');
+  background-size: cover;
+  background-position: center;
+  /* other styles already included */
+}
+
+
+/* Header (Month & Year Selector) */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ABD;
+}
+
+select {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(72, 144, 226, 0.7);
+}
+
+/* Today Highlight Text */
+p {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #f4f4f4;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Days of the Week Header */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.font-bold {
+  font-size: 0.9rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Day Grid Items */
+.p-1 {
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+.p-1:hover {
+  background-color: rgba(72, 144, 226, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.p-1:active {
+  transform: scale(0.95);
+}
+
+/* Today Highlight */
+.bg-red-500 {
+  background-color: #ff4c4c;
+}
+
+.bg-blue-500 {
+  background-color: #4A90E2;
+}
+
+.bg-gray-200 {
+  background-color: #f1f1f1;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-xs {
+  font-size: 0.8rem;
+}
+
+/* Selected Day */
+.bg-blue-500 {
+  background-color: #4A90E2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effects */
+.p-1:hover {
+  background-color: #3A74B3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Transitions */
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .calendar-container {
+    width: 95%;
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+
+  .font-bold {
+    font-size: 0.8rem;
+  }
+}
